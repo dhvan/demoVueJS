@@ -61,6 +61,9 @@ import {
   BImg,
   BIconChatTextFill,
   BIconChevronDoubleLeft,
+  BInputGroup,
+  BInputGroupAppend,
+  BFormCheckboxGroup
 } from "bootstrap-vue";
 
 Vue.component("BForm", BForm);
@@ -121,3 +124,6 @@ Vue.component("BIconHandThumbsUp", BIconHandThumbsUp);
 Vue.component("BImg", BImg);
 Vue.component("BIconChatTextFill", BIconChatTextFill);
 Vue.component("BIconChevronDoubleLeft", BIconChevronDoubleLeft);
+Vue.component("BInputGroup", BInputGroup);
+Vue.component("BInputGroupAppend", BInputGroupAppend);
+Vue.component("BFormCheckboxGroup", BFormCheckboxGroup);
