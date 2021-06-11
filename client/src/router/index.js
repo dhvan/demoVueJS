@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home";
 import Login from "../views/Login";
 import Employees from "../views/Employees";
+import CreateEmployee from "../views/CreateEmployee";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/Employees",
     name: "Employees",
     component: Employees,
+  },
+  {
+    path: "/Employees/create",
+    name: "CreateEmployee",
+    component: CreateEmployee,
   }
 ];
 

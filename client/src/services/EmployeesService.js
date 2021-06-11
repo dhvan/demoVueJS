@@ -11,7 +11,6 @@ export default {
     return Api().post('employees', employee)
   },
   put (employee) {
-    console.log('test', employee)
     return Api().put(`employees/${employee.employeeId}`, employee)    
   }
 }

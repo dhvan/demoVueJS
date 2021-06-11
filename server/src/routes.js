@@ -18,6 +18,6 @@ module.exports = (app) => {
     EmployeeController.show)
   app.put('/employees/:employeeId',
     EmployeeController.put)
-  app.put('/employees',
+  app.post('/employees',
     EmployeeController.post)
 }

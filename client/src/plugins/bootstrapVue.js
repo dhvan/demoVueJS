@@ -63,7 +63,7 @@ import {
   BIconChevronDoubleLeft,
   BInputGroup,
   BInputGroupAppend,
-  BFormCheckboxGroup
+  BFormCheckboxGroup,
 } from "bootstrap-vue";
 
 Vue.component("BForm", BForm);

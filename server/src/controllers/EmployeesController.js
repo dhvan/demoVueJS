@@ -52,9 +52,13 @@ module.exports = {
   async post (req, res) {
     console.log('ssss')
     try {
-      const employee = await Employees.create(req.body)
-      console.log('abc', employee)
-      res.send(employee)
+      const param = req.body
+      if (param.Name && param.Chucvu && param.Dept && param.Manager) {
+        const employee = await Employees.create(req.body)
+        console.log('abc', employee)
+        res.send(employee)
+      }
+      throw new Error()
     } catch (err) {
       res.status(500).send({
         error: 'an error has occured trying to create the employee'
@@ -63,7 +67,6 @@ module.exports = {
   },
 
   async put (req, res) {
-    console.log('#AAAAAAAA', req)
     try {
       await Employees.update(req.body, {
         where: {
