@@ -41,11 +41,11 @@ module.exports = {
 
       const isPasswordValid = await user.comparePassword(password)
       if (!isPasswordValid) {
+        console.log('user')
         return res.status(403).send({
           error: 'The login information was incorrect'
         })
       }
-
       const userJson = user.toJSON()
       res.send({
         user: userJson,

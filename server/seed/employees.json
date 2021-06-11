@@ -12,6 +12,12 @@
         "Manager": "ABC"
     },
     {
+        "Name": "Nguyen Van B",
+        "Chucvu": "Junior Developer",
+        "Dept": 1,
+        "Manager": "ABC"
+    },
+    {
         "Name": "Nguyen Van C",
         "Chucvu": "Senior Developer",
         "Dept": 1,
@@ -30,8 +36,32 @@
         "Manager": "DEF"
     },
     {
-        "Name": "Pham Van B",
+        "Name": "Pham Van C",
         "Chucvu": "Senior Developer",
+        "Dept": 2,
+        "Manager": "DEF"
+    },
+    {
+        "Name": "Pham Van D",
+        "Chucvu": "Junior Developer",
+        "Dept": 2,
+        "Manager": "DEF"
+    },
+    {
+        "Name": "Ng Van E",
+        "Chucvu": "Senior Developer",
+        "Dept": 2,
+        "Manager": "DEF"
+    },
+    {
+        "Name": "Nguyen Thi E",
+        "Chucvu": "Junior Developer",
+        "Dept": 2,
+        "Manager": "DEF"
+    },
+    {
+        "Name": "Nguyen Thi F",
+        "Chucvu": "Junior Developer",
         "Dept": 2,
         "Manager": "DEF"
     }

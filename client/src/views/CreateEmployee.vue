@@ -3,7 +3,7 @@
   <div class="title">Welcome New Member</div>
   <b-form class="formData" @submit="onSubmit">
     <b-alert :show="showSuccess" dismissible>Create Successful</b-alert>
-    <b-alert :show="showFail">Please try again</b-alert>
+    <b-alert variant="danger" :show="showFail">Please try again</b-alert>
     <b-form-group id="input-group-1" label="Full Name:" label-for="input-1">
       <b-form-input
         id="input-1"
@@ -87,8 +87,8 @@ export default {
       showSuccess: false,
       showFail: false,
       options: [
-        { name: "TEAM A", teamId: 1 },
-        { name: "Team B", teamId: 2 },
+        { name: "ABC", teamId: 1 },
+        { name: "DEF", teamId: 2 },
       ],
       form: {
         Name: "",

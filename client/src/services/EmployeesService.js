@@ -12,5 +12,8 @@ export default {
   },
   put (employee) {
     return Api().put(`employees/${employee.employeeId}`, employee)    
+  },
+  remove (employeeId) {
+    return Api().post(`employees/remove/${employeeId}`, {employeeId: employeeId})    
   }
 }

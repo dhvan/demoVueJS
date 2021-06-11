@@ -79,5 +79,22 @@ module.exports = {
         error: 'an error has occured trying to update the employee'
       })
     }
+  },
+
+  async remove (req, res) {
+    console.log(req.body.employeeId)
+    try {
+      const employee = await Employees.findOne({
+        where: {
+          id: req.body.employeeId
+        }
+      })
+      await employee.destroy()
+      res.send(employee)
+    } catch (err) {
+      res.status(500).send({
+        error: 'an error has occured trying to update the employee'
+      })
+    }
   }
 }

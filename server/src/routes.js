@@ -20,4 +20,6 @@ module.exports = (app) => {
     EmployeeController.put)
   app.post('/employees',
     EmployeeController.post)
+  app.post('/employees/remove/:employeeId',
+    EmployeeController.remove)
 }

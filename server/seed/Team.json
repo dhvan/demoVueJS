@@ -1,10 +1,10 @@
 [
     {
-        "Name": "TEAM A",
+        "Name": "ABC",
         "Dept": 1
     },
     {
-        "Name": "Team B",
+        "Name": "DEF",
         "Dept": 2
     }
 ]
