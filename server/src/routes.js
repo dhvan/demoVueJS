@@ -2,8 +2,6 @@ const AuthenticationController = require('./controllers/AuthenticationController
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
 const EmployeeController = require('./controllers/EmployeesController')
 
-// const isAuthenticated = require('./policies/isAuthenticated')
-
 module.exports = (app) => {
   console.log('aa')
   app.post('/register',

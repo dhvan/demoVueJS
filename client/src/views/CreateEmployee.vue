@@ -110,6 +110,7 @@ export default {
           Chucvu: this.formData.chucVu,
           Dept: this.formData.dept,
           Manager: this.formData.manager,
+          Team: this.selectedTeam
         });
       } catch (e) {
         console.log(e);
@@ -117,7 +118,7 @@ export default {
       if (response?.status === 200) {
         this.showSuccess = true
       } else {
-this.showFail = true
+        this.showFail = true
       }
       
     },

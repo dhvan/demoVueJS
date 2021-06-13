@@ -1,4 +1,5 @@
-const {Employees} = require('../models')
+const { Employees } = require('../models')
+const { Teams } = require('../models')
 
 module.exports = {
   async index (req, res) {
@@ -50,15 +51,21 @@ module.exports = {
   },
 
   async post (req, res) {
-    console.log('ssss')
     try {
       const param = req.body
+      const teamIds = req.body.Team.map(item => item.teamId)
       if (param.Name && param.Chucvu && param.Dept && param.Manager) {
-        const employee = await Employees.create(req.body)
-        console.log('abc', employee)
+        const employee = await Employees.create({
+          Name: param.Name,
+          Chucvu: param.Chucvu,
+          Dept: param.Dept,
+          Manager: param.Manager,
+          Teams: teamIds
+        }, {
+          include: [Teams]
+        })
         res.send(employee)
       }
-      throw new Error()
     } catch (err) {
       res.status(500).send({
         error: 'an error has occured trying to create the employee'
@@ -68,12 +75,18 @@ module.exports = {
 
   async put (req, res) {
     try {
+      const teamIds = req.body.Team.map(item => item.teamId)
       await Employees.update(req.body, {
         where: {
           id: req.params.employeeId
-        }
-      })
-      res.send(req.body)
+        }})
+      for (let i = 0; i < teamIds.length; i++) {
+        const t = await Teams.findById(teamIds[i])
+        const employee = await Employees.findById(req.body.employeeId)
+        employee.setTeams([t])
+        employee.save()
+        res.send(employee)
+      }
     } catch (err) {
       res.status(500).send({
         error: 'an error has occured trying to update the employee'

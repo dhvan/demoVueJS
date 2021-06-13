@@ -310,10 +310,9 @@ export default {
         Team: this.selectedTeam[item.id],
         Dept: this.formData[item.id]?.Dept,
       }).then(() => {
-        // this.loadData()
-        (item.Name = this.formData[item.id]?.name),
-          (item.Chucvu = this.formData[item.id]?.Chucvu),
-          (item.Teams = this.selectedTeam[item.id]);
+        item.Name = this.formData[item.id]?.name,
+        item.Chucvu = this.formData[item.id]?.Chucvu,
+        item.Teams = this.selectedTeam[item.id];
         item.Dept = this.formData[item.id].Dept;
       });
       item._showDetails = false;
