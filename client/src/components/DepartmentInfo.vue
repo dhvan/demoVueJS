@@ -1,17 +1,17 @@
 <template>
   <div class="dp">
     <div class="d-flex justify-content-center w-100">
-      <div class="dp__name">DP01</div>
+      <div class="dp__name">Department</div>
     </div>
     <div class="d-flex justify-content-center w-100">
       <div class="dp__manager">Manager</div>
     </div>
     <div class="dp__team-container">
       <div class="dp__team">
-        <p>Team A Ka Na Ha Mu Ya Mi No YU</p>
+        <p>Team</p>
       </div>
       <div class="dp__team">
-        <p>Team B</p>
+        <p>Team</p>
       </div>
     </div>
   </div>

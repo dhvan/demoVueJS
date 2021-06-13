@@ -95,7 +95,7 @@
 
           <template #row-details="row">
             <b-card>
-              <b-form @submit="onSubmit" v-if="show">
+              <b-form @submit="onSubmit" v-if="show && formData[row.item.id]">
                 <b-form-group
                   id="input-group-1"
                   label="Full Name:"
@@ -273,7 +273,6 @@ export default {
   },
   methods: {
     async onDelete(id) {
-      console.log(id);
       await EmployeesService.remove(id);
       this.loadData();
     },

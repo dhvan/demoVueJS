@@ -15,7 +15,7 @@
       ></b-form-input>
     </b-form-group>
 
-    <b-form-group id="input-group-2" label="Chucvu" label-for="input-2">
+    <b-form-group id="input-group-2" label="Role" label-for="input-2">
       <b-form-input
         id="input-2"
         v-model="formData.chucVu"
@@ -33,7 +33,7 @@
         size="sm"
       ></b-form-input>
     </b-form-group>
-    <b-form-group id="input-group-4" label="Manafer" label-for="input-4">
+    <b-form-group id="input-group-4" label="Manager" label-for="input-4">
       <b-form-input
         id="input-4"
         placeholder="Enter your manager"
@@ -43,7 +43,7 @@
       ></b-form-input>
     </b-form-group>
     <div>
-      <label class="typo__label">Simple select / dropdown</label>
+      <label class="typo__label">Select team</label>
       <multiselect
         v-model="selectedTeam"
         :options="options"

@@ -3,7 +3,6 @@ const AuthenticationControllerPolicy = require('./policies/AuthenticationControl
 const EmployeeController = require('./controllers/EmployeesController')
 
 module.exports = (app) => {
-  console.log('aa')
   app.post('/register',
     AuthenticationControllerPolicy.register,
     AuthenticationController.register)

@@ -20,5 +20,8 @@ yarn build
 yarn lint
 ```
 
+### Run test
+yarn jest tests/unit/Employees.spec.js
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
