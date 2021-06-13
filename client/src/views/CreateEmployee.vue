@@ -113,7 +113,7 @@ export default {
           Team: this.selectedTeam
         });
       } catch (e) {
-        console.log(e);
+        console.log('an error has occured trying to create the employee');
       }
       if (response?.status === 200) {
         this.showSuccess = true
