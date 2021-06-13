@@ -80,13 +80,15 @@ module.exports = {
         where: {
           id: req.params.employeeId
         }})
+      let temp = []
       for (let i = 0; i < teamIds.length; i++) {
         const t = await Teams.findById(teamIds[i])
-        const employee = await Employees.findById(req.body.employeeId)
-        employee.setTeams([t])
-        employee.save()
-        res.send(employee)
+        temp.push(t)
       }
+      const employee = await Employees.findById(req.body.employeeId)
+      employee.setTeams(temp)
+      employee.save()
+      res.send(employee)
     } catch (err) {
       res.status(500).send({
         error: 'an error has occured trying to update the employee'

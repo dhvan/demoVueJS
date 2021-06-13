@@ -291,8 +291,8 @@ export default {
       this.items.forEach((item) => {
         item.teamName = {};
         this.selectedTeam[item.id] = item?.Teams?.map((e) => ({
-          name: e.name,
-          id: e.teamId,
+            name: e.name,
+            id: e.teamId,
         }));
       });
       this.totalRows = this.items.length;
@@ -331,6 +331,7 @@ export default {
     },
     handleClickEditBtn(row) {
       row.toggleDetails();
+      this.selectedTeam[row.item.id] = row.item.Teams;
       this.formData[row.item.id] = {};
       this.formData[row.item.id].name = row.item.Name;
       this.formData[row.item.id].Chucvu = row.item.Chucvu;
